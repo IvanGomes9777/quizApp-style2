@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.contentLeft a {
+  text-decoration: none;
+}
+
+.contentLeft h1{
+    color: white;
+    font-size: 20px;
+}
+
+.contentLeft {
+  background-color: blue;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10% 0% 0% 10%;
+  gap: 15px;
+  width: 30%;
+}
+
+.brainLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    margin-bottom:20px ;
+}
+
+.brainLogo img {
+  width: 90px;
+}
+
+.brainLogo h2 {
+  font-size: 15px;
+  color: white;
+}
+
+.header{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.card{
+    margin-top: 8px;
+}
+
+.quiz-answer-card:hover{
+  background-color: rgba(0, 0, 0,0.2);
+  cursor: pointer;
+}
+
+.bg-success , .bg-danger{
+  color: white;
+}
+
+#endScreen{
+background-color: beige;
+border-radius:50%;
+width: 300px;
+height: 300px;
+margin-left: 30px;
+}
+
+#endScreen img{
+  width: 150px;
+}
+
+.endScreen-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}

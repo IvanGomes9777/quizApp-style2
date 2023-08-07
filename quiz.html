@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="script.js"></script>
+  </head>
+  <body onload="render()">
+    
+    <div  class="center-all">
+      <div class="contentLeft">
+        <div class="brainLogo">
+          <img src="img/Group 8.png" alt="" />
+        </div>
+        <a href="#">
+          <h1>HTML</h1>
+        </a>
+        <a href="#">
+          <h1>CSS</h1>
+        </a>
+        <a href="#">
+          <h1>JS</h1>
+        </a>
+        <a href="#">
+          <h1>Java</h1>
+        </a>
+      </div>
+      <div id="endScreen" style="display: none;">    
+        <div class="endScreen-container">
+        <h2>Quiz beendet</h2>
+        <img src="img/Group 5.png" alt="">
+       </div>
+      </div>
+      <div id="endScreenNone" class="contentRight">
+        <span><b id="question-number">1</b> von <b id="questions-length"></b> Fragen</span>
+        <button onclick="nextQuestion()" id="next-button" disabled style="margin-left: 170px;" type="button" class="btn btn-outline-primary">Nächste Frage</button>
+        <div id="showCurrentQuestion" class="header">
+          <h1 >Wer hat Katze erfunden</h>
+      </div>
+        <div class=" quiz-answer-card card"  onclick="answer('answer_1')">
+            <div id="answer_1" class="card-body">
+              Frage 1
+            </div>
+          </div>
+          <div class="quiz-answer-card card"  onclick="answer('answer_2')">
+            <div id="answer_2" class="card-body">
+              Frage 1
+            </div>
+          </div>
+          <div class="quiz-answer-card card"  onclick="answer('answer_3')">
+            <div id="answer_3" class="card-body">
+              Frage 1
+            </div>
+          </div>
+          <div class="quiz-answer-card card"  onclick="answer('answer_4')">
+            <div id="answer_4" class="card-body">
+              Frage 1
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

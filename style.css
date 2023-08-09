@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 600px;
+  margin-top: 15px;
 }
 
 .contentLeft a {
@@ -96,5 +97,11 @@ body {
 }
 
 .progress{
-  margin-top: 15px;
+  position: absolute;
+  width: 100vw;
+}
+
+a h1:hover{
+color: darkblue;
+border-left: 4px solid black; 
 }

@@ -1,31 +1,31 @@
 let questions = [
   {
-    question: "What is 9 + 10?",
-    answer_1: 21,
+    question: "Wofür steht HTML",
+    answer_1: "Hypertext Markup Laguage",
     answer_2: 19,
     answer_3: 5,
     answer_4: 7,
     right_answer: 1,
   },
   {
-    question: "R U GAY?",
+    question: "Was ist HTML5",
     answer_1: "yes",
     answer_2: "No",
-    answer_3: "No, but 20 Euro is 20 Euro",
+    answer_3: "HTML5 ist die neueste oder aktualisierte Version der Markup-Sprache, die HTML definiert.",
     answer_4: "Sometimes",
     right_answer: 3,
   },
   {
-    question: "What is this?",
+    question: "Wer hat HTML erfunde",
     answer_1: "that",
-    answer_2: "this",
+    answer_2: "Tim Berners-Lee",
     answer_3: "there",
     answer_4: "okay",
     right_answer: 2,
   },
   {
-    question: "What is?",
-    answer_1: 21,
+    question: "Wie wählst du aus alle Elemente vom Typ <a> mit dem attribut title aus?",
+    answer_1: "a[title] {...}",
     answer_2: 19,
     answer_3: 5,
     answer_4: 7,
@@ -93,7 +93,7 @@ function answer(selection) {
   let selectedQuestionNumber = selection.slice(-1);
   idOfRightAnswer = `answer_${question["right_answer"]}`;
 
-  if (correctAnswer(selectedQuestionNumber)) {
+  if (correctAnswer(selectedQuestionNumber, question)) {
     document.getElementById(selection).parentNode.classList.add("bg-success");
     rightQuestion++;
     AUDIO_SUCCESS.play();
@@ -106,16 +106,8 @@ function answer(selection) {
   document.getElementById("next-button").disabled = false;
 }
 
-function correctAnswer(selectedQuestionNumber){
-    return selectedQuestionNumber == questions["right_answer"];
-}
-
-function failedAnswer(){
-    
-}
-
-function successAnswer(){
-    
+function correctAnswer(selectedQuestionNumber, question){
+    return selectedQuestionNumber == question["right_answer"];
 }
 
 function nextQuestion() {

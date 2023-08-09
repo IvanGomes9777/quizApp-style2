@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body onload="render()">
     
@@ -16,22 +19,27 @@
           <img src="img/Group 8.png" alt="" />
         </div>
         <a href="#">
-          <h1>HTML</h1>
+          <h1 class="font">HTML</h1>
         </a>
         <a href="#">
-          <h1>CSS</h1>
+          <h1 class="font">CSS</h1>
         </a>
         <a href="#">
-          <h1>JS</h1>
+          <h1 class="font">JS</h1>
         </a>
         <a href="#">
-          <h1>Java</h1>
+          <h1 class="font">Java</h1>
         </a>
       </div>
-      <div id="endScreen" style="display: none;">    
+      <div id="endScreen" style="display: none;height: 100%;width: 100%;">    
         <div class="endScreen-container">
+        <div class="finish-img">
         <h2>Quiz beendet</h2>
         <img src="img/Group 5.png" alt="">
+      </div>
+        <p style="text-align: center;margin-top: 30px;">Du hast <b id="amountRightQuestions">xxx</b> von <b id="amountEndScreenQuestions"></b> Fragen richtig beantwortet</p>
+        <button onclick="restartGame()" id="restart-button" type="button" class="btn btn-outline-primary">Erneut Spielen</button>
+
        </div>
       </div>
       <div id="endScreenNone" class="contentRight">
@@ -59,6 +67,9 @@
             <div id="answer_4" class="card-body">
               Frage 1
             </div>
+          </div>
+          <div class="progress">
+            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;"></div>
           </div>
         </div>
       </div>

@@ -105,3 +105,18 @@ a h1:hover{
 color: darkblue;
 border-left: 4px solid black; 
 }
+
+@media(max-width:570px){
+  .center-all{
+    width:100%;
+  }
+
+    .card{
+      margin-top: 2px;
+    }
+
+    #next-button{
+      margin-left: 135px;
+    }
+
+}  

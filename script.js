@@ -49,9 +49,16 @@ function render() {
 function showQuestion() {
   if (gameOver()) {
     showEndScreen();
+    document.getElementById("progress-bar").style.width = "100%";
+    document.getElementById("progress-bar").innerHTML = "100%";
+
   } else {
-    updateProgressBar();
     showNextQuestion();
+    let percent = (currentQuestion / questions.length)*100;
+    percent = Math.round(percent);
+
+    document.getElementById("progress-bar").innerHTML = `${percent}%`;
+    document.getElementById("progress-bar").style = `width:${percent}%;`;
   }
 }
 
@@ -60,10 +67,7 @@ function gameOver(){
 }
 
 function updateProgressBar(){
-    let percent = (currentQuestion + 1) / questions.length;
-    percent = Math.round(percent * 100);
-    document.getElementById("progress-bar").innerHTML = `${percent}%`;
-    document.getElementById("progress-bar").style = `width:${percent}%;`;
+    
 }
 
 function showNextQuestion(){
